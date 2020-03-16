@@ -9,11 +9,11 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/pablogtzgileta"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Pablo Gutierrez React App
         </a>
       </header>
     </div>
