@@ -7,7 +7,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <a
+          className="App-link"
+          href="https://github.com/pablogtzgileta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Pablo Gutierrez React App
+        </a>
       </header>
     </div>
   );
