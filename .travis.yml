@@ -6,4 +6,4 @@ before_install:
   - docker build -t pablo/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run pablo/docker-react npm run test -- --coverage # Test and checks if succeed
+  - docker run -e CI=true pablo/docker-react npm run test # Test and checks if succeed
