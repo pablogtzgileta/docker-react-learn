@@ -7,3 +7,15 @@ before_install:
 
 script:
   - docker run -e CI=true pablo/docker-react npm run test # Test and checks if succeed
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-react-learn" # Name added in EBS
+  env: "DockerReactLearn-env" # Environment name in EBS
+  bucket_name: "elasticbeanstalk-us-east-1-378089708077"
+  bucket_path: "docker-react-learn"
+  on:
+    branch: master # Do this when we deploy to master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
