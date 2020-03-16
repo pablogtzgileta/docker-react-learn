@@ -1,0 +1,9 @@
+sudo: required #Permissions
+services:
+  - docker # We need docker
+
+before_install:
+  - docker build -t pablo/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run pablo/docker-react npm run test -- --coverage # Test and checks if succeed
